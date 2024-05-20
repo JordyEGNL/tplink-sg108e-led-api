@@ -6,6 +6,21 @@ I have a TP-Link SG108E switch and I wanted to turn off the LEDs at night. The s
 My Home Assistant will call this API to turn off the LEDs at a specific time. And turn them back on in the morning.
 
 ## Usage
+### docker-compose.yml file
+```yaml
+services:
+  tplink-api:
+    container_name: tplink-api
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      TP_LINK_IP: 192.168.1.1
+      TP_LINK_USERNAME: admin
+      TP_LINK_PASSWORD: admin
+```
+
+### Build and run the container
 ```bash
 docker compose up -d --build
 ```
