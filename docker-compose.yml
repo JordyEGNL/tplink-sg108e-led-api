@@ -1,0 +1,9 @@
+services:
+  tplink-api:
+    container_name: tplink-api
+    build: .
+    environment:
+      TP_LINK_IP: 192.168.1.1
+      TP_LINK_USERNAME: admin
+      TP_LINK_PASSWORD: admin
+
