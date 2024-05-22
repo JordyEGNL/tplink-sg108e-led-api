@@ -1,11 +1,9 @@
 services:
-  tplink-api:
-    container_name: tplink-api
+  tp-link-led-control:
     build: .
     ports:
       - "5000:5000"
     environment:
-      TP_LINK_IP: 192.168.1.1
-      TP_LINK_USERNAME: admin
-      TP_LINK_PASSWORD: admin
-
+      TP_LINK_IP: "10.0.0.11"
+      TP_LINK_USERNAME: "admin"
+      TP_LINK_PASSWORD: "admin"

@@ -1,20 +1,15 @@
-# Use an official Python runtime as a parent image
-FROM python:3.9-slim
+FROM golang:1.22
 
-# Set the working directory in the container
+ENV GIN_MODE=release
+
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY ./src /app
+COPY ./src/go.mod ./src/go.sum ./
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN go mod download
 
-# Make port 5000 available to the world outside this container
-EXPOSE 5000
+COPY ./src/*.go ./
 
-# Define environment variable
-ENV FLASK_APP=app.py
+RUN go build -o /tplink-sg108e-led-api
 
-# Run app.py when the container launches
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["/tplink-sg108e-led-api"]
