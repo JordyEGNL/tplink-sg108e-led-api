@@ -1,5 +1,5 @@
 # tplink-sg108e-led-api
-Simple API written in Python and Flask to turn the LEDs on the switch on and off
+Simple API written in Go to turn the LEDs on my switch on and off
 
 ## WHY?
 I have a TP-Link SG108E switch and I wanted to turn off the LEDs at night. The switch has a built in way to turn off the LEDs via the web interface, but I wanted to automate this process and turn off the LEDs at a specific time.
