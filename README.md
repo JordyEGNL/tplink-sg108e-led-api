@@ -11,7 +11,7 @@ My Home Assistant will call this API to turn off the LEDs at a specific time. An
 services:
   tplink-api:
     container_name: tplink-api
-    build: .
+    image: ghcr.io/jordyegnl/tplink-sg108e-led-api:latest
     ports:
       - "5000:5000"
     environment:
@@ -20,9 +20,9 @@ services:
       TP_LINK_PASSWORD: admin
 ```
 
-### Build and run the container
+### Run the container
 ```bash
-docker compose up -d --build
+docker compose up -d
 ```
 
 ## Endpoints
