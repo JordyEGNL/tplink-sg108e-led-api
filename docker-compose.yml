@@ -1,6 +1,6 @@
 services:
   tp-link-led-control:
-    build: .
+    image: ghcr.io/jordyegnl/tplink-sg108e-led-api:latest
     ports:
       - "5000:5000"
     environment:
