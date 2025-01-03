@@ -1,0 +1,9 @@
+{
+    "extends": [
+      "config:recommended"
+    ],
+    "prHourlyLimit": 0,
+    "assignees": [
+        "JordyEGNL"
+      ]
+}
