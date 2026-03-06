@@ -2,7 +2,7 @@ module jordyegnl/tplink-sg108e-led-api
 
 go 1.24.0
 
-toolchain go1.26.0
+toolchain go1.26.1
 
 require github.com/gin-gonic/gin v1.11.0
 
